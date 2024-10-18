@@ -17,5 +17,5 @@ for i, column in enumerate(significant_variables, 1):
     plt.grid(True)
 
 plt.tight_layout()
-plt.savefig('Scatter_Significant_Variables_vs_Yield.png')
+# plt.savefig('Scatter_Significant_Variables_vs_Yield.png')
 plt.show()
