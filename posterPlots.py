@@ -107,7 +107,15 @@ xgb_feature_importance_df = pd.DataFrame({
 # Plot the feature importances
 plt.figure(figsize=(8, 6))
 plt.barh(xgb_feature_importance_df['Feature'], xgb_feature_importance_df['Importance'], color='skyblue')
-plt.xlabel('Importance')
-plt.title('Feature Importances from XGBoost')
-plt.gca().invert_yaxis()  # Invert y-axis to show highest importance at the top
+
+# Increase y-axis tick label size
+plt.yticks(fontsize=12, fontweight='bold')  # Adjust the font size as needed
+
+# Make the title bold and increase its size
+plt.xlabel('Importance', fontsize=12, fontweight='bold')  # You can also increase this size if needed
+plt.title('Feature Importances from XGBoost', fontsize=14, fontweight='bold')
+plt.xticks(fontsize=12, fontweight='bold')
+# Invert y-axis to show the most important features at the top
+plt.gca().invert_yaxis()
+
 plt.show()
